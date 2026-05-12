@@ -19,7 +19,8 @@ namespace ProjectFiles.Visual.UI
 
         public void OnButtonClick()
         {
-            _economyService.AddGold(_clickerConfig.GoldPerClick);
+            float totalPower = _clickerConfig.GoldPerClick + _economyService.ClickUpgrade.Level;
+            _economyService.AddGold(totalPower);
         }
     }
 }

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662fd8df278d441c2a756ce487e0baee, type: 3}
   m_Name: ClickerConfig
   m_EditorClassIdentifier: 
-  GoldPerClick: 1
+  _goldPerClick: 1
+  _autoClickPower: 1

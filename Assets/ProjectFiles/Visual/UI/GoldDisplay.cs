@@ -3,10 +3,11 @@ using ProjectFiles.Core.Services;
 using TMPro;
 using UnityEngine;
 using VContainer;
+using ProjectFiles.Core.Utils;
 
 namespace ProjectFiles.Visual.UI
 {
-    public class GoldDisplay : MonoBehaviour
+    internal sealed class GoldDisplay : MonoBehaviour
     {
         [SerializeField] private TMP_Text _goldText;
 
@@ -31,7 +32,7 @@ namespace ProjectFiles.Visual.UI
 
         private void UpdateDisplay(float currentGold)
         {
-            _goldText.text = currentGold.ToString();
+            _goldText.text = currentGold.ToFormattedString();
         }
     }
 }
