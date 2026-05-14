@@ -40,5 +40,26 @@ namespace ProjectFiles.Core.Services
                 _ => null
             };
         }
+        
+        public void LoadData(SaveData data)
+        {
+            if (data == null) return;
+    
+            _currentGold = data.Gold;
+            ClickUpgrade.Level = data.ClickLevel;
+            AutoClickUpgrade.Level = data.AutoClickLevel;
+    
+            OnGoldChanged?.Invoke(_currentGold);
+        }
+
+        public SaveData GetSaveData()
+        {
+            return new SaveData
+            {
+                Gold = _currentGold,
+                ClickLevel = ClickUpgrade.Level,
+                AutoClickLevel = AutoClickUpgrade.Level
+            };
+        }
     }
 }

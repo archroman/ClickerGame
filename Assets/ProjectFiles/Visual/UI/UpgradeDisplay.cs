@@ -5,7 +5,6 @@ using UnityEngine;
 using VContainer;
 using ProjectFiles.Core.Utils;
 using ProjectFiles.Data.Configs;
-using Unity.VisualScripting;
 
 namespace ProjectFiles.Visual.UI
 {
